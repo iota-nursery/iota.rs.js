@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Rust related ignores
+/target/
+**/*.rs.bk
+Cargo.lock
