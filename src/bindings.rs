@@ -16,7 +16,7 @@ pub fn subseed(c_seed: *const c_char, index: usize) -> *mut c_char {
     let seed_str = c_seed_str.to_str().unwrap();
     let seed: Trinary = seed_str.chars().collect();
 
-    let subseed = iss::subseed::<SimpleCurl>(seed, index);
+    let subseed = iss::subseed(seed, index);
 
     CString::new(subseed.to_string().as_bytes())
         .unwrap()
@@ -29,7 +29,7 @@ pub fn key(c_subseed: *const c_char) -> *mut c_char {
     let subseed_str = c_subseed_str.to_str().unwrap();
     let subseed: Trinary = subseed_str.chars().collect();
 
-    let key = iss::key::<SimpleCurl>(subseed);
+    let key = iss::key(subseed);
 
     CString::new(key.to_string().as_bytes()).unwrap().into_raw()
 }
@@ -40,7 +40,7 @@ pub fn digest_key(c_key: *const c_char) -> *mut c_char {
     let key_str = c_key_str.to_str().unwrap();
     let key: Trinary = key_str.chars().collect();
 
-    let digest = iss::digest_key::<SimpleCurl>(key);
+    let digest = iss::digest_key(key);
 
     CString::new(digest.to_string().as_bytes())
         .unwrap()
@@ -53,7 +53,7 @@ pub fn address(c_digest: *const c_char) -> *mut c_char {
     let digest_str = c_digest_str.to_str().unwrap();
     let digest: Trinary = digest_str.chars().collect();
 
-    let address = iss::address::<SimpleCurl>(digest);
+    let address = iss::address(digest);
 
     CString::new(address.to_string().as_bytes())
         .unwrap()
@@ -70,7 +70,7 @@ pub fn signature(c_bundle: *const c_char, c_key: *const c_char) -> *mut c_char {
     let bundle_str = c_bundle_str.to_str().unwrap();
     let bundle: Trinary = bundle_str.chars().collect();
 
-    let signature = iss::signature::<SimpleCurl>(bundle, key);
+    let signature = iss::signature(bundle, key);
 
     CString::new(signature.to_string().as_bytes())
         .unwrap()
@@ -87,7 +87,7 @@ pub fn digest_bundle_signature(c_bundle: *const c_char, c_signature: *const c_ch
     let bundle_str = c_bundle_str.to_str().unwrap();
     let bundle: Trinary = bundle_str.chars().collect();
 
-    let digest = iss::digest_bundle_signature::<SimpleCurl>(bundle, signature);
+    let digest = iss::digest_bundle_signature(bundle, signature);
 
     CString::new(digest.to_string().as_bytes())
         .unwrap()
