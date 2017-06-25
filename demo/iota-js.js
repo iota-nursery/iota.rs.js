@@ -1,0 +1,1 @@
+../target/asmjs-unknown-emscripten/debug/iota-js.js
