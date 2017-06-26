@@ -1,16 +1,4 @@
-var Module = require("./iota-js.js");
-
-// fn curl_simple_new() -> *Curl 
-var curl_simple_new = Module.cwrap('curl_simple_new', 'number', []);
-// fn curl_simple_delete(*Curl)
-var curl_simple_delete = Module.cwrap('curl_simple_delete', '', ['number']);
-// fn curl_simple_absorb(*Curl, Trinary) -> digest
-var curl_simple_absorb = Module.cwrap('curl_simple_absorb', '', ['number', 'string']);
-// fn curl_simple_reset(*Curl)
-var curl_simple_reset = Module.cwrap('curl_simple_reset', '', ['number']);
-// fn curl_simple_squeeze(*Curl, trit_count) -> signature
-var curl_simple_squeeze = Module.cwrap('curl_simple_squeeze', 'string', ['number', 'number']);
-
+import Curl from "../lib/iota.js";
 
 var trinary = "9999999999999999999999999999999999999999999999999999999999999\
 9999999999999999999999999999999999999999999999999999999999999\
@@ -57,7 +45,8 @@ var trinary = "9999999999999999999999999999999999999999999999999999999999999\
 999999999999999999999999999999T999999999999999999999999999999\
 99999999999999999999999OLOB99999999999999999999999";
 
-var curl = curl_simple_new();
-curl_simple_absorb(curl, trinary);
-var hash = curl_simple_squeeze(curl, 243);
-console.log("this is: " + hash);
+var curl = new Curl();
+curl.absorb(trinary);
+var hash = curl.squeeze(243);
+console.log(hash);
+curl.destroy();

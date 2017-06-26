@@ -1,4 +1,4 @@
-var Module = require("./iota-js.js");
+var Module = require("../lib/iota-rs.js");
 
 // fn subseed(seed, index) -> subseed
 var iss_subseed = Module.cwrap('subseed', 'string', ['string', 'number']);

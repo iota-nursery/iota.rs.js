@@ -6,9 +6,6 @@
   "directories": {
     "lib": "lib"
   },
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iotaledger/iota.rs.js.git"
@@ -18,10 +15,24 @@
     "rust",
     "tangle"
   ],
-  "author": "Paul Handy, Andreas Osowski",
+  "contributors": [
+    {
+      "name": "Paul Handy",
+      "email": "paul.d.handy@gmail.com",
+      "url": "https://github.com/paulhandy/"
+    },
+    {
+      "name": "Andreas C. Osowski",
+      "email": "andreas@osowski.de",
+      "url": "https://github.com/th0br0"
+    }
+  ],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/iotaledger/iota.rs.js/issues"
   },
-  "homepage": "https://github.com/iotaledger/iota.rs.js#readme"
+  "homepage": "https://github.com/iotaledger/iota.rs.js#readme",
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1"
+  }
 }

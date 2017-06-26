@@ -1,0 +1,4 @@
+{
+  "presets": ["latest"],
+  "ignore": ["lib/iota-rs.js"]
+}
