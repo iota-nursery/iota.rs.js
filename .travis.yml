@@ -1,0 +1,9 @@
+deploy:
+  provider: npm
+  email: paul@iota.org
+  api_key:
+    secure: RHTDQpEgDGAniOQoZTF+5YT5eZ7KtorirRohXuKSQehCUBFPe71i/HQMmHf5PdXV33fgNufET1lfwM5lSHrkZ4sHNrr53JB7vTUi7VxuQff3M/s+2NLm5W5+5vPx7pNVUaJJPLvdnamnBD3ipixn6vacwQh2MvPOHRZ8rBNFhSUypHRmNDVWIxxMAFm/rTlVqy315I1uoVFhwBTf5ir3LCX3GahUPg+7+mGbpiEaSh3JGrLVfES3EDZY6M3TO1Y6L/vwGG3cIHHonTyT7nt3ICyorbpiTXFI8lJlktJoVq28vi1ik0XpQ3aAtECdG2I0xemDnwllGPMJLx3Xqs8IhsSL9CmLImP2060gOStfaoSb/KkTviLAmN0v/Pj7IdU5kD9ucWpVrKV3g8c2bOU+1tn4TG55EAtwYQUuexiQioO2Wl7Bpn719g4+IotfI+pdIsVeLcGVUXdreqvnHCO7HwSoAasT5JuJrLUJXLlcCPOS/Bt2VYjXIa05YmDoJwsx9j/ef6dUlLNz2hMQjgL+wkXMTzJXAovbu1PabEebCwve67OcHcwqrv012H2o7u/AgmQ00r4qpaUUM/h4XN+1EF/uxHxDU59zOLnHd4O4IMebkQbflWKSu/BzIX+T7JEd+h+JuWf+Zaz0p8Sl7CVt7uVDenVywCXWiH0zxRpgcaI=
+  on:
+    tags: true
+    repo: iotaledger/iota.rs.js
+    branch: master
