@@ -1,4 +1,4 @@
 {
-  "presets": ["latest"],
+  "presets": ["es2017"],
   "ignore": ["src/iota-rs.js"]
 }
