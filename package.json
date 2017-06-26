@@ -1,10 +1,17 @@
 {
   "name": "iota.rs",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "IOTA rust to javascript libraries",
-  "module": "lib/iota.js",
+  "main": "lib/iota.js",
   "directories": {
     "lib": "lib"
+  },
+  "scripts": {
+    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib && cp src/iota-rs.js lib/iota-rs.js"
+  },
+  "babel": {
+    "presets": ["es2017"],
+    "ignore": ["src/iota-rs.js"]
   },
   "repository": {
     "type": "git",
@@ -33,6 +40,8 @@
   },
   "homepage": "https://github.com/iotaledger/iota.rs.js#readme",
   "devDependencies": {
-    "babel-preset-latest": "^6.24.1"
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-es2017": "^6.24.1"
   }
 }
