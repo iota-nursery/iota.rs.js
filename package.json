@@ -2,7 +2,7 @@
   "name": "iota.rs",
   "version": "0.1.0",
   "description": "IOTA rust to javascript libraries",
-  "main": "lib/iota.js",
+  "module": "lib/iota.js",
   "directories": {
     "lib": "lib"
   },
