@@ -1,0 +1,27 @@
+{
+  "name": "iota.rs",
+  "version": "0.1.0",
+  "description": "IOTA rust to javascript libraries",
+  "main": "lib/iota.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iotaledger/iota.rs.js.git"
+  },
+  "keywords": [
+    "iota",
+    "rust",
+    "tangle"
+  ],
+  "author": "Paul Handy, Andreas Osowski",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/iotaledger/iota.rs.js/issues"
+  },
+  "homepage": "https://github.com/iotaledger/iota.rs.js#readme"
+}
